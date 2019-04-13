@@ -1,122 +1,41 @@
 // Header Styles
-h1 > a,
-h2 > a,
-h3 > a,
-h4 > a,
-h5 > a,
-h6 > a {
-	color: @primaryColor;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
-		"Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-	line-height: @lineHeightHeader;
-	margin-bottom: 1.8rem;
-	font-weight: 800;
-	color: @textColor;
-
-	&.underline {
-		text-decoration: none;
-		position: relative;
-		margin-bottom: 5.5rem;
-
-		&:after {
-			position: absolute;
-			content: '';
-			height: .25ch;
-			bottom: -3rem;
-			margin: 0;
-			left: 0;
-			right: 0;
-			width: 8rem;
-			background: @primaryColor;
-		}
-	}
-
-	&.overline {
-		font-size: @body;
-		margin-bottom: 1rem;
-		line-height: @lineHeightBody;
-		font-weight: 700;
-		text-transform: uppercase;
-		letter-spacing: 0;
-	}
-
-	&.accent {
-		color: @primaryColor;
-	}
-}
+// h1 > a,
+// h2 > a,
+// h3 > a,
+// h4 > a,
+// h5 > a,
+// h6 > a {
+// 	color: @primaryColor;
+// }
 
 h1,
 .h1 {
-	font-size: @h1;
-	@media (max-width: 1199px) {
-		font-size: @h1Medium;
-	}
-	@media (max-width: 767px) {
-		font-size: @h1Small;
-	}
+	.heading1();
 }
 
 h2,
 .h2 {
-	font-size: @h2;
-	@media (max-width: 1199px) {
-		font-size: @h2Medium;
-	}
-	@media (max-width: 767px) {
-		font-size: @h2Small;
-	}
+	.heading2();
 }
 
 h3,
 .h3 {
-	font-size: @h3;
-	@media (max-width: 1199px) {
-		font-size: @h3Medium;
-	}
-	@media (max-width: 767px) {
-		font-size: @h3Small;
-	}
+	.heading3();
 }
 
 h4,
 .h4 {
-	font-size: @h4;
-	@media (max-width: 1199px) {
-		font-size: @h4Medium;
-	}
-	@media (max-width: 767px) {
-		font-size: @h4Small;
-	}
+	.heading4();
 }
 
 h5,
 .h5 {
-	font-size: @h5;
-	@media (max-width: 1199px) {
-		font-size: @h5Medium;
-	}
-	@media (max-width: 767px) {
-		font-size: @h5Small;
-	}
+	.heading5();
 }
 
 h6,
 .h6 {
-	font-size: @h6;
-	@media (max-width: 1199px) {
-		font-size: @h6Medium;
-	}
-	@media (max-width: 767px) {
-		font-size: @h6Small;
-	}
+	.heading6();
 }
 
 hr {
@@ -156,6 +75,7 @@ table {
 	border: 2px solid #eee;
 	max-width: 100%;
 	overflow-x: scroll;
+	margin-bottom: 1.8rem;
 
 	td,
 	th {

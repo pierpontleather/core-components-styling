@@ -1,0 +1,1 @@
+{"version":3,"sources":["src/script/index.js"],"names":["console","log"],"mappings":";;;AAEA,aAFA,QAAA,uBAEAA,QAAQC,IAAI","file":"script.ab25d8c1.js","sourceRoot":"..","sourcesContent":["import '../style/index.less';\n\nconsole.log('hello world');\n"]}

@@ -1,0 +1,164 @@
+// Text Mixins
+.underline() {
+	text-decoration: none;
+	position: relative;
+	margin-bottom: 5.5rem;
+	&:after {
+		position: absolute;
+		content: '';
+		height: .25ch;
+		bottom: -3rem;
+		margin: 0;
+		left: 0;
+		right: 0;
+		width: 8rem;
+		background: @primaryColor;
+	}
+}
+.overline() {
+	font-size: @body;
+	margin-bottom: 1rem;
+	line-height: @lineHeightBody;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0;
+}
+
+.accent() {
+	color: @primaryColor;
+}
+
+.headers() {
+	font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+		"Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	line-height: @lineHeightHeader;
+	margin-bottom: 1.8rem;
+	font-weight: 800;
+	background: transparent;
+}
+
+.heading1() {
+	.headers();
+	&.underline {
+		.underline();
+	}
+	&.overline {
+		.overline();
+	}
+	&.accent,
+	& > span.accent {
+		.accent();
+	}
+	font-size: @h1Normal;
+	@media (max-width: 1199px) {
+		font-size: @h1Medium;
+	}
+	@media (max-width: 767px) {
+		font-size: @h1Small;
+	}
+}
+
+.heading2() {
+	.headers();
+	&.underline {
+		.underline();
+	}
+	&.overline {
+		.overline();
+	}
+	&.accent,
+	& > span.accent {
+		.accent();
+	}
+	font-size: @h2Normal;
+	@media (max-width: 1199px) {
+		font-size: @h2Medium;
+	}
+	@media (max-width: 767px) {
+		font-size: @h2Small;
+	}
+}
+
+.heading3() {
+	.headers();
+	&.underline {
+		.underline();
+	}
+	&.overline {
+		.overline();
+	}
+	&.accent,
+	& > span.accent {
+		.accent();
+	}
+	font-size: @h3Normal;
+	@media (max-width: 1199px) {
+		font-size: @h3Medium;
+	}
+	@media (max-width: 767px) {
+		font-size: @h3Small;
+	}
+}
+
+.heading4() {
+	.headers();
+	&.underline {
+		.underline();
+	}
+	&.overline {
+		.overline();
+	}
+	&.accent,
+	& > span.accent {
+		.accent();
+	}
+	font-size: @h4Normal;
+	@media (max-width: 1199px) {
+		font-size: @h4Medium;
+	}
+	@media (max-width: 767px) {
+		font-size: @h4Small;
+	}
+}
+
+.heading5() {
+	.headers();
+	&.underline {
+		.underline();
+	}
+	&.overline {
+		.overline();
+	}
+	&.accent,
+	& > span.accent {
+		.accent();
+	}
+	font-size: @h5Normal;
+	@media (max-width: 1199px) {
+		font-size: @h5Medium;
+	}
+	@media (max-width: 767px) {
+		font-size: @h5Small;
+	}
+}
+
+.heading6() {
+	.headers();
+	&.underline {
+		.underline();
+	}
+	&.overline {
+		.overline();
+	}
+	&.accent,
+	& > span.accent {
+		.accent();
+	}
+	font-size: @h6Normal;
+	@media (max-width: 1199px) {
+		font-size: @h6Medium;
+	}
+	@media (max-width: 767px) {
+		font-size: @h6Small;
+	}
+}

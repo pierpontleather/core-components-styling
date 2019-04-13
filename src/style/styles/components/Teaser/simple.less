@@ -1,0 +1,67 @@
+// Text-based Teaser
+div.cmp-teaser.simple {
+	background: @textColor;
+	img {
+		display: none;
+	}
+
+	// simple teaser base-styles
+	.cmp-teaser__content {
+		padding: @verticalSpacing 3.6rem;
+		color: @textColorLight;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+
+		.cmp-teaser__description {
+			p {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	// underlined (will not work on centered components)
+	&.underline:not(.centered):not(.green) {
+		& > .cmp-teaser__content > h2 {
+			.underline();
+		}
+	}
+
+	// centered
+	&.centered > .cmp-teaser__content {
+		align-items: center;
+	}
+	&.green > .cmp-teaser__content {
+		background: @primaryColor;
+	}
+
+	// wide
+	&.wide {
+		margin-left: calc(50% - 50vw);
+		margin-right: calc(50% - 50vw);
+
+		.cmp-teaser__content {
+			padding-left: 0;
+			padding-right: 0;
+
+			.innerContainerMixin();
+		}
+	}
+
+	// tall
+	&.tall {
+		padding: @verticalSpacing 3.6rem;
+	}
+
+	// No Background
+	&.noBackground {
+		background: none;
+		.cmp-teaser__content {
+			padding: @verticalSpacing 0;
+			color: @textColor;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+}

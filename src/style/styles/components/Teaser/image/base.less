@@ -1,0 +1,139 @@
+// Background-image Teaser
+div.cmp-teaser.image.callOut {
+	text-align: center;
+	position: relative;
+	min-height: 500px;
+	height: fit-content;
+
+	.cmp-image {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+
+		img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+			filter: brightness(.65);
+		}
+	}
+	.cmp-teaser__content {
+		position: absolute;
+		height: 100%;
+		color: @textColorLight;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		h2 {
+			.h3();
+		}
+	}
+
+	// wide
+	&.wide {
+		margin-left: calc(50% - 50vw);
+		margin-right: calc(50% - 50vw);
+
+		.cmp-teaser__content {
+			padding-left: 0;
+			padding-right: 0;
+
+			.innerContainerMixin();
+		}
+	}
+
+	&.hero {
+		text-align: left;
+		min-height: 100vh;
+
+		:last-child {
+			padding-bottom: @verticalSpacing;
+		}
+		.cmp-teaser__content {
+			.innerContainerMixin();
+
+			align-items: flex-start;
+			justify-content: flex-end;
+
+			h2 {
+				.h1();
+			}
+		}
+	}
+}
+
+/*Previous Work */
+
+// text-align: center;
+// position: relative;
+// min-height: 300px;
+// height: fit-content;
+
+// .cmp-image {
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+//   overflow: hidden;
+
+//   img {
+//     height: 100%;
+//     width: 100%;
+//     object-fit: cover;
+//     filter: brightness(.65);
+//   }
+// }
+// .cmp-teaser__content {
+//   position: absolute;
+//   height: 100%;
+//   color: @textColorLight;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   width: calc(100% - (100% - @containerWidthLarge));
+//   @media (max-width: 1600px) {
+//     width: calc(100% - (100% - @containerWidthMedium));
+//   }
+//   @media (max-width: 767px) {
+//     width: calc(100% - (100% - @containerWidthSmall));
+//   }
+//   h2 {
+//     .h3();
+//   }
+// }
+
+// // wide
+// &.wide {
+//   margin-left: calc(50% - 50vw);
+//   margin-right: calc(50% - 50vw);
+
+//   .cmp-teaser__content {
+//     padding-left: 0;
+//     padding-right: 0;
+
+//     .innerContainerMixin();
+//   }
+// }
+
+// &.hero {
+//   text-align: left;
+//   min-height: 100vh;
+
+//   :last-child {
+//     padding-bottom: @verticalSpacing;
+//   }
+//   .cmp-teaser__content {
+//     .innerContainerMixin();
+
+//     align-items: flex-start;
+//     justify-content: flex-end;
+
+//     h2 {
+//       .h1();
+//     }
+//   }
+// }
+// // Tease
