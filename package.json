@@ -1,10 +1,11 @@
 {
-  "name": "aem",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "devDependencies": {
-    "cssnano": "^4.1.10",
-    "less": "^3.9.0"
-  }
+	"name": "pp250309_aem",
+	"version": "1.0.1",
+	"main": "dist/script.b1316819.js",
+	"files": [ "dist" ],
+	"license": "None",
+	"devDependencies": {
+		"cssnano": "^4.1.10",
+		"less": "^3.9.0"
+	}
 }
