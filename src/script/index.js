@@ -1,3 +1,2 @@
 import '../style/index.less';
-
-console.log('hello world');
+import './vendor/fitie.js';

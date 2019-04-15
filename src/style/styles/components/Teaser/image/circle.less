@@ -1,0 +1,131 @@
+div.cmp-teaser.circle {
+	position: relative;
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	width: 100%;
+	overflow: hidden;
+	margin-top: @verticalSpacing;
+	margin-bottom: @verticalSpacing;
+
+	@media (max-width: 992px) {
+		flex-direction: column-reverse;
+	}
+
+	.cmp-image {
+		position: relative;
+		text-align: right;
+		width: 35vw;
+		height: 35vw;
+		max-height: 640px;
+		max-width: 640px;
+
+		.cmp-image__image {
+			display: block;
+			filter: brightness(.65);
+			width: 35vw;
+			height: 35vw;
+			max-height: 640px;
+			max-width: 640px;
+			object-fit: cover;
+			border-style: none;
+			border-radius: 50%;
+		}
+	}
+
+	.cmp-teaser__content {
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		min-height: auto;
+		min-width: auto;
+		padding-right: 3.6rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+
+		h2 {
+			margin-bottom: 5.5rem;
+			a {
+				color: @textColor;
+				transition: all .2s ease-in-out;
+				.h2();
+				.underline();
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+
+		.cmp-teaser__description {
+			margin-bottom: 1.8rem;
+		}
+	}
+
+	.cmp-teaser__action-container {
+		padding-bottom: 0rem !important;
+		text-transform: uppercase;
+		background-color: transparent;
+		border: 2px solid #249c15;
+		height: 4rem;
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		padding-left: 2rem;
+		width: fit-content;
+
+		a {
+			position: relative;
+			.overline();
+			color: #249c15;
+			margin-top: 0rem;
+			height: 100%;
+
+			&:hover {
+				text-decoration: none;
+
+				&:after {
+					display: inline-block;
+					margin-left: 4rem;
+				}
+			}
+
+			&:after {
+				.fa-icon;
+				.fas;
+				content: @fa-var-chevron-right;
+				color: white;
+				font-size: 24px;
+				display: inline-block;
+				line-height: 1.8;
+				margin-left: 2rem;
+				padding-top: 0rem;
+				margin-top: 0rem;
+				padding-left: 1.8rem;
+				padding-right: 1.6rem;
+				// width: 4rem;
+				height: 100%;
+				// margin-bottom: -1.6rem;
+				// margin-right: .1rem;
+				background-color: #249c15;
+				transition: all 400ms cubic-bezier(.68, -.55, .265, 1.55);
+			}
+		}
+	}
+
+	&.wide {
+		width: 100vw;
+		margin-left: calc(50% - 50vw);
+		margin-right: calc(50% - 50vw);
+	}
+
+	&.center {
+		.cmp-teaser__content {
+			justify-content: center;
+			text-align: center;
+			align-items: center;
+		}
+	}
+}
